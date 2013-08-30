@@ -36,6 +36,3 @@ if __name__ == '__main__':
 
     print 'Found largest palindrome: {} ({} x {})'.format(max, max_i, max_j)
     print 'Finished'
-
-    sys.exit(0)
-
