@@ -1,3 +1,12 @@
+def is_palindrome(n):
+    n = str(n)
+
+    for i in xrange(len(n)):
+        if n[i] != n[-i - 1]:
+            return False
+
+    return True
+
 
 def is_prime(n):
 

@@ -1,4 +1,11 @@
-from utils import factorise, is_prime
+from utils import is_palindrome, is_prime, factorise
+
+
+def test_is_palindrome():
+    assert is_palindrome(9009)
+    assert is_palindrome(5)
+    assert is_palindrome(525)
+    assert not is_palindrome(54)
 
 
 def test_is_prime():

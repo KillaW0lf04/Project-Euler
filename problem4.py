@@ -3,23 +3,10 @@
 #
 # Find the largest palindrome made from the product of two 3-digit numbers.
 
-
-def is_palindrome(n):
-    n = str(n)
-
-    for i in xrange(len(n)):
-        if n[i] != n[-i - 1]:
-            return False
-
-    return True
-
-# Run Test Suite
-assert is_palindrome(9009)
-assert not is_palindrome(54)
+from utils import is_palindrome
 
 
 if __name__ == '__main__':
-    import sys
 
     max = 0
     max_i = 0
