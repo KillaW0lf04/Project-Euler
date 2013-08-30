@@ -9,7 +9,7 @@ def is_prime(n):
     return True
 
 
-# A bit ineffecient ...
+# A bit inefficient ... but it works
 def factorise(n):
 
     factors = set()
@@ -28,7 +28,3 @@ def factorise(n):
                 break
 
     return None
-
-assert factorise(10) == {2, 5}
-assert factorise(16) == {2}
-assert factorise(27) == {3}
