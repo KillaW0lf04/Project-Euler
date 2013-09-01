@@ -18,6 +18,8 @@ def test_is_prime():
 
 
 def test_factorise():
-    assert factorise(10) == {2, 5}
-    assert factorise(16) == {2}
-    assert factorise(27) == {3}
+    # ToDo: find way to compare using unordered lists
+    assert factorise(10) == [2, 5]
+    assert factorise(16) == [2, 2, 2, 2]
+    assert factorise(27) == [3, 3, 3]
+    assert factorise(35) == [5, 7]

@@ -20,19 +20,19 @@ def is_prime(n):
 # A bit inefficient ... but it works
 def factorise(n):
 
-    factors = set()
+    factors = []
 
     while True:
 
         if is_prime(n):
-            factors.add(n)
+            factors.append(n)
             return factors
 
         # Find the next number to divide by
         for i in xrange(2, n - 1):
             if n % i == 0:
                 n /= i
-                factors.add(i)
+                factors.append(i)
                 break
 
     return None
