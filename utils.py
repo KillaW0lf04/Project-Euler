@@ -13,6 +13,9 @@ def is_palindrome(n):
 
 def is_prime(n):
 
+    if n <= 1:
+        return False
+
     # You can stop at
     # the square root, since all other combinations of factors would
     # include one number larger than the square root, and one smaller.

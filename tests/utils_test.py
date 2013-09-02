@@ -15,6 +15,8 @@ def test_is_prime():
     assert is_prime(23)
     assert is_prime(311)
     assert is_prime(313)
+    assert not is_prime(0)
+    assert not is_prime(1)
     assert not is_prime(4)
     assert not is_prime(8)
     assert not is_prime(16)
