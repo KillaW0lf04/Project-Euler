@@ -9,10 +9,15 @@ def test_is_palindrome():
 
 
 def test_is_prime():
+    assert is_prime(2)
     assert is_prime(5)
     assert is_prime(3)
     assert is_prime(23)
+    assert is_prime(311)
+    assert is_prime(313)
+    assert not is_prime(4)
     assert not is_prime(8)
+    assert not is_prime(16)
     assert not is_prime(100)
     assert not is_prime(27)
 
