@@ -1,6 +1,10 @@
 import math
 
 
+def triangle_number(n):
+    return sum(xrange(1, n + 1))
+
+
 def is_palindrome(n):
     n = str(n)
 

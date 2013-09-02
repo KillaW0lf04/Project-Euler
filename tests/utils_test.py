@@ -1,4 +1,11 @@
-from utils import is_palindrome, is_prime, factorise
+from utils import is_palindrome, is_prime, factorise, triangle_number
+
+
+def test_triangle_number():
+    assert triangle_number(1) == 1
+    assert triangle_number(2) == 3
+    assert triangle_number(5) == 15
+    assert triangle_number(7) == 28
 
 
 def test_is_palindrome():
