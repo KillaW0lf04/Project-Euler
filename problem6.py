@@ -8,9 +8,11 @@
 # the square of the sum is 3025 - 385 = 2640.
 #
 # Find the difference between the sum of the squares of the first one hundred natural numbers and the square of the sum.
+import time
 
 
 if __name__ == '__main__':
+    t0 = time.time()
 
     UP_TO = 100
 
@@ -24,4 +26,7 @@ if __name__ == '__main__':
 
     value2 **= 2
 
+    runtime = time.time() - t0
+
     print 'Result = {}'.format(value2 - value1)
+    print 'Runtime = {}'.format(runtime)

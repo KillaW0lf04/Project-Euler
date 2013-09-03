@@ -1,4 +1,6 @@
 # Find the greatest product of five consecutive digits in the 1000-digit number.
+import time
+
 
 problem = '73167176531330624919225119674426574742355349194934'\
           '96983520312774506326239578318016984801869478851843'\
@@ -22,6 +24,7 @@ problem = '73167176531330624919225119674426574742355349194934'\
           '71636269561882670428252483600823257530420752963450'
 
 if __name__ == '__main__':
+    t0 = time.time()
 
     result = 0
 
@@ -34,4 +37,7 @@ if __name__ == '__main__':
         if product > result:
             result = product
 
+    runtime = time.time() - t0
+
     print 'Result = {}'.format(result)
+    print 'Runtime = {}'.format(runtime)

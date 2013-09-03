@@ -4,6 +4,7 @@
 
 # NOTE: Remember xrange is exclusive of the last value passed
 import operator
+import time
 
 from collections import Counter
 from utils import factorise
@@ -15,6 +16,7 @@ for i in xrange(2, 11):
 
 
 if __name__ == '__main__':
+    t0 = time.time()
 
     # Use the counter class for performing list operations
     primes = Counter()
@@ -32,6 +34,9 @@ if __name__ == '__main__':
             value = reduce(operator.mul, primes.elements(), 1)
             print value
 
+    runtime = time.time() - t0
+
     print
     print 'Finished!'
     print 'Result = {}, Factors = {}'.format(value, list(primes.elements()))
+    print 'Runtime = {}'.format(runtime)
