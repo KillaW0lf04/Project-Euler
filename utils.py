@@ -1,6 +1,8 @@
 import math
 
 
+# Can also be performed recursively
+# triangle(n) = triangle(n-1) + n
 def triangle_number(n):
     return sum(xrange(1, n + 1))
 
