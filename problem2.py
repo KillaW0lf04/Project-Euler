@@ -5,25 +5,34 @@
 #
 # By considering the terms in the Fibonacci sequence whose values do not exceed four million,
 # find the sum of the even-valued terms.
+import time
 
-fibonacci = []
 
-buffer = [1, 0]  # Circular buffer for holding previous 2 terms
+if __name__ == '__main__':
+    t0 = time.time()
 
-FOUR_MILLION = 4 * (10 ** 6)
+    fibonacci = []
 
-i = 1
-while True:
-    value = buffer[0] + buffer[1]
+    buffer = [1, 0]  # Circular buffer for holding previous 2 terms
 
-    if value > FOUR_MILLION:
-        break
+    FOUR_MILLION = 4 * (10 ** 6)
 
-    if value % 2 == 0:
-        fibonacci.append(value)
+    i = 1
+    while True:
+        value = buffer[0] + buffer[1]
 
-    buffer[i % 2] = value
-    i += 1
+        if value > FOUR_MILLION:
+            break
 
-print 'ready'
-print sum(fibonacci)
+        if value % 2 == 0:
+            fibonacci.append(value)
+
+        buffer[i % 2] = value
+        i += 1
+
+    result = sum(fibonacci)
+
+    runtime = time.time() - t0
+
+    print 'Result = {}'.format(result)
+    print 'Runtime = {}'.format(runtime)
