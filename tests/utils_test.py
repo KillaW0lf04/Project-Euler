@@ -32,7 +32,7 @@ def test_is_prime():
 
 
 def test_factorise():
-    # ToDo: find way to compare using unordered lists
+    # Result will always be sorted in ascending order
     assert factorise(10) == [2, 5]
     assert factorise(16) == [2, 2, 2, 2]
     assert factorise(27) == [3, 3, 3]
