@@ -1,5 +1,21 @@
 import math
 
+from collections import Counter
+
+
+# Calculates the number of divisors using the divisor theorem
+# http://en.wikipedia.org/wiki/Divisor_function
+def divisors(n):
+    primes = factorise(n)
+    exponents = Counter(primes)   # Count the exponents for each prime
+
+    result = 1
+
+    for value in exponents.values():
+        result *= value + 1
+
+    return result
+
 
 # Can also be performed recursively
 # triangle(n) = triangle(n-1) + n

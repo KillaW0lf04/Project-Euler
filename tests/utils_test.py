@@ -1,4 +1,10 @@
-from utils import is_palindrome, is_prime, factorise, triangle_number
+from utils import is_palindrome, is_prime, factorise, triangle_number, divisors
+
+
+def test_divisors():
+    assert divisors(1) == 1
+    assert divisors(28) == 6
+    assert divisors(76576500) == 576
 
 
 def test_triangle_number():
