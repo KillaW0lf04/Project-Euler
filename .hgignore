@@ -1,8 +1,11 @@
-#Pycharm
+# Pycharm
 .idea
 
-#Linux Junk
+# Linux Junk
 .*~
 
-#Python Junk
+# Python Junk
 .*\.pyc
+
+# Mercurial Files
+.*\.orig
