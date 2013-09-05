@@ -4,7 +4,7 @@ import math
 # Can also be performed recursively
 # triangle(n) = triangle(n-1) + n
 def triangle_number(n):
-    return sum(xrange(1, n + 1))
+    return n * (n + 1) / 2
 
 
 def is_palindrome(n):
@@ -38,6 +38,9 @@ def is_prime(n):
 
 # A bit inefficient ... but it works
 def factorise(n):
+
+    if n <= 1:
+        return []
 
     factors = []
     end = math.sqrt(n)
