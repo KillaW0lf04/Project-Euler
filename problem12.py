@@ -17,10 +17,8 @@
 # What is the value of the first triangle number to have over five hundred divisors?
 
 import time
-import math
-import sys
 
-from utils import triangle_number
+from utils import triangle_number, divisor_function
 
 # Properties of triangular numbers
 #
@@ -28,27 +26,24 @@ from utils import triangle_number
 #  * triangle(n - 1) + triangle(n) = n^2
 #  * triangle(n) = n * (n + 1) / 2
 
+
 if __name__ == '__main__':
     t0 = time.time()
 
     n = 1
+    triangle = 0
+    d = 0
 
     while True:
 
         triangle = triangle_number(n)
         n += 1
 
-        divisors = 0
+        d = divisor_function(triangle)
 
-        # For every divisor under the square root, there is a divisor above.
-        for i in xrange(1, int(math.sqrt(triangle)) + 1):
-            if triangle % i == 0:
-                divisors += 2
+        if d > 500:
+            break
 
-        if divisors > 500:
-            runtime = time.time() - t0
-
-            print 'Result = {} ({} Divisors)'.format(triangle, divisors)
-            print 'Runtime = {}'.format(runtime)
-
-            sys.exit(0)
+    runtime = time.time() - t0
+    print 'Result = {} (Divisors = {})'.format(triangle, d)
+    print 'Runtime = {}'.format(runtime)

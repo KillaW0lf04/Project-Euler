@@ -5,7 +5,7 @@ from collections import Counter
 
 # Calculates the number of divisors using the divisor theorem
 # http://en.wikipedia.org/wiki/Divisor_function
-def divisors(n):
+def divisor_function(n):
     primes = factorise(n)
     exponents = Counter(primes)   # Count the exponents for each prime
 
