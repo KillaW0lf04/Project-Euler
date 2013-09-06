@@ -1,6 +1,13 @@
 import math
+import operator
 
 from collections import Counter
+
+
+# Not my work. Taken from http://stackoverflow.com/questions/3025162/statistics-combinations-in-python
+nCk = lambda n, k: int(round(
+    reduce(operator.mul, (float(n-i)/(i+1) for i in range(k)), 1)
+))
 
 
 # Calculates the number of divisors using the divisor theorem

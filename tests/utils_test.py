@@ -1,4 +1,10 @@
-from utils import is_palindrome, is_prime, factorise, triangle_number, divisor_function
+from utils import is_palindrome, is_prime, factorise, triangle_number, divisor_function, nCk
+
+
+def test_nCk():
+    assert nCk(1, 1) == 1
+    assert nCk(2, 1) == 2
+    assert nCk(8, 4) == 70
 
 
 def test_divisors():
