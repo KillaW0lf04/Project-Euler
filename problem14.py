@@ -38,7 +38,7 @@ if __name__ == '__main__':
     for i in xrange(1, 1000000):
 
         if i % 100000 == 0:
-            print i
+            print 'Progress ... {}%'.format(100 * i/1000000.0)
 
         step = i
         count = 0
@@ -62,5 +62,6 @@ if __name__ == '__main__':
 
     runtime = time.time() - t0
 
-    print 'Result = {} ({})'.format(result, max_count)
+    print 'Result = {} (Chain Length = {})'.format(result, max_count)
+    print 'Cache Size = {}'.format(len(cache))
     print 'Runtime = {}'.format(runtime)
