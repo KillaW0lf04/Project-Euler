@@ -1,13 +1,27 @@
 import math
-import operator
 
 from collections import Counter
 
 
-# Not my work. Taken from http://stackoverflow.com/questions/3025162/statistics-combinations-in-python
-nCk = lambda n, k: int(round(
-    reduce(operator.mul, (float(n-i)/(i+1) for i in range(k)), 1)
-))
+# n Choose k. Also known as the binomial coefficient.
+# I.e. number of possible sets we can choose k items from n choices
+# When the order is not important and repetition is not allowed
+def nCk(n, k):
+    return factorial(n) / (factorial(n - k) * factorial(k))
+
+
+# n Permute k.
+# I.e. number of ways we can choose k items from n choices
+# When the order is important and repetition is not allowed
+def nPk(n, k):
+    return factorial(n) / factorial(n - k)
+
+
+def factorial(n):
+    if n == 1 or n == 0:
+        return 1
+    else:
+        return n * factorial(n - 1)
 
 
 # Calculates the number of divisors using the divisor theorem
