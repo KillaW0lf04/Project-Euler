@@ -1,10 +1,24 @@
-from utils import is_palindrome, is_prime, factorise, triangle_number, divisor_function, nCk
+from utils import is_palindrome, is_prime, factorise, triangle_number, divisor_function, nCk, nPk, factorial
 
 
 def test_nCk():
     assert nCk(1, 1) == 1
     assert nCk(2, 1) == 2
     assert nCk(8, 4) == 70
+
+
+def test_nPk():
+    assert nPk(20, 2) == 20 * 19
+    assert nPk(12, 5) == 12 * 11 * 10 * 9 * 8
+    assert nPk(19, 3) == 19 * 18 * 17
+    assert nPk(19, 19) == factorial(19)
+
+
+def test_factorial():
+    assert factorial(0) == 1
+    assert factorial(1) == 1
+    assert factorial(5) == 5 * 4 * 3 * 2 * 1
+    assert factorial(7) == 7 * 6 * 5 * 4 * 3 * 2 * 1
 
 
 def test_divisors():
