@@ -3,6 +3,12 @@ import math
 from collections import Counter
 
 
+# Return a true value if the given year (represented by an int) is a leap year
+# A leap year occurs on any year evenly divisible by 4, but not on a century unless it is divisible by 400.
+def is_leap_year(year):
+    return year % 4 == 0 and (year % 100 != 0 or year % 400 == 0)
+
+
 # n Choose k. Also known as the binomial coefficient.
 # I.e. number of possible sets we can choose k items from n choices
 # When the order is not important and repetition is not allowed

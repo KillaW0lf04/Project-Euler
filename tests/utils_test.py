@@ -1,4 +1,19 @@
-from utils import is_palindrome, is_prime, factorise, triangle_number, divisor_function, nCk, nPk, factorial
+from utils import is_palindrome, is_prime, factorise, triangle_number
+from utils import divisor_function, nCk, nPk, factorial, is_leap_year
+
+
+def test_is_leap_year():
+
+    # Years evenly divisible by 4 are leap years
+    assert is_leap_year(2072)
+    assert is_leap_year(2400)
+    assert is_leap_year(2060)
+
+    # Years which are centuries are not leap years
+    assert not is_leap_year(1900)
+
+    # Years which are centuries but evenly divisible by 400
+    assert is_leap_year(2000)
 
 
 def test_nCk():
