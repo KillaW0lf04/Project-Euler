@@ -1,5 +1,5 @@
 from utils import is_palindrome, is_prime, factorise, triangle_number
-from utils import divisor_function, nCk, nPk, factorial, is_leap_year
+from utils import number_of_divisors, nCk, nPk, factorial, is_leap_year
 
 
 def test_is_leap_year():
@@ -37,9 +37,9 @@ def test_factorial():
 
 
 def test_divisors():
-    assert divisor_function(1) == 1
-    assert divisor_function(28) == 6
-    assert divisor_function(76576500) == 576
+    assert number_of_divisors(1) == 1
+    assert number_of_divisors(28) == 6
+    assert number_of_divisors(76576500) == 576
 
 
 def test_triangle_number():

@@ -18,7 +18,7 @@
 
 import time
 
-from utils import triangle_number, divisor_function
+from utils import triangle_number, number_of_divisors
 
 # Properties of triangular numbers
 #
@@ -39,7 +39,7 @@ if __name__ == '__main__':
         triangle = triangle_number(n)
         n += 1
 
-        d = divisor_function(triangle)
+        d = number_of_divisors(triangle)
 
         if d > 500:
             break
