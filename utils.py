@@ -3,6 +3,13 @@ import math
 from collections import Counter
 
 
+def fibonacci(n):
+    if n == 1 or n == 2:
+        return 1
+    else:
+        return fibonacci(n - 1) + fibonacci(n - 2)
+
+
 def is_deficient_number(n):
     return sum_of_divisors(n) < n
 

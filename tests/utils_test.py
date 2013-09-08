@@ -1,6 +1,13 @@
 from utils import *
 
 
+def test_fibonacci():
+    assert fibonacci(1) == 1
+    assert fibonacci(2) == 1
+    assert fibonacci(10) == 55
+    assert fibonacci(20) == 6765
+
+
 def test_is_abundant_number():
     assert is_abundant_number(12)
     assert is_abundant_number(18)
