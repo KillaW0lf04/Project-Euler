@@ -1,5 +1,30 @@
-from utils import is_palindrome, is_prime, factorise, triangle_number
-from utils import number_of_divisors, nCk, nPk, factorial, is_leap_year
+from utils import *
+
+
+def test_is_abundant_number():
+    assert is_abundant_number(12)
+    assert is_abundant_number(18)
+    assert is_abundant_number(20)
+    assert is_abundant_number(100)
+
+
+def test_is_deficient_number():
+    assert is_deficient_number(4)
+    assert is_deficient_number(10)
+    assert is_deficient_number(284)
+
+
+def test_is_perfect_number():
+    assert is_perfect_number(6)
+    assert is_perfect_number(28)
+    assert is_perfect_number(496)
+    assert is_perfect_number(8589869056)
+
+
+def test_sum_of_divisors():
+    assert sum_of_divisors(28) == 28  # Perfect Number
+    assert sum_of_divisors(12) == 16  # Abundant Number
+    assert sum_of_divisors(284) == 220  # Deficient Number
 
 
 def test_is_leap_year():

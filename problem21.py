@@ -8,23 +8,8 @@
 # Evaluate the sum of all the amicable numbers under 10000.
 
 import time
-import math
 
-
-# Sum of divisors function
-def d(n):
-    result = set()  # Use a set to prevent multiples
-    result.add(1)  # Always include 1
-
-    # We only need to check till sqrt(n)
-    limit = int(math.sqrt(n))
-
-    for i in xrange(2, limit):
-        if n % i == 0:
-            result.add(i)
-            result.add(n / i)   # Pair above sqrt(n)
-
-    return sum(result)
+from utils import sum_of_divisors
 
 
 if __name__ == '__main__':
@@ -41,9 +26,9 @@ if __name__ == '__main__':
         if a in cache:
             continue
 
-        b = d(a)
+        b = sum_of_divisors(a)
 
-        if a != b and d(b) == a:
+        if a != b and sum_of_divisors(b) == a:
             cache.add(a)
             cache.add(b)
             pairs.append((a, b))

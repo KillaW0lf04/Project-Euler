@@ -3,6 +3,33 @@ import math
 from collections import Counter
 
 
+def is_deficient_number(n):
+    return sum_of_divisors(n) < n
+
+
+def is_abundant_number(n):
+    return sum_of_divisors(n) > n
+
+
+def is_perfect_number(n):
+    return n == sum_of_divisors(n)
+
+
+def sum_of_divisors(n):
+    result = set()  # Use a set to prevent multiples
+    result.add(1)  # Always include 1
+
+    # We only need to check till sqrt(n)
+    limit = int(math.sqrt(n))
+
+    for i in xrange(2, limit + 1):
+        if n % i == 0:
+            result.add(i)
+            result.add(n / i)   # Pair above sqrt(n)
+
+    return sum(result)
+
+
 # Return a true value if the given year (represented by an int) is a leap year
 # A leap year occurs on any year evenly divisible by 4, but not on a century unless it is divisible by 400.
 def is_leap_year(year):
