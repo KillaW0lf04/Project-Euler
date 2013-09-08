@@ -11,6 +11,7 @@ import time
 import math
 
 
+# Sum of divisors function
 def d(n):
     result = set()  # Use a set to prevent multiples
     result.add(1)  # Always include 1
