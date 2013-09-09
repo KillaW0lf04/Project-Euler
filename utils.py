@@ -7,11 +7,11 @@ from collections import Counter
 # Generate primes up the given limit
 def sieve_of_eratosthenes(limit):
 
-    sieve = {}
-    for i in xrange(2, limit + 1):
-        sieve[i] = True
+    sieve = [True] * (limit + 1)
+    sieve[0] = False
+    sieve[1] = False
 
-    for n, flag in sieve.items():
+    for n, flag in enumerate(sieve):
 
         # If still marked as a prime
         if flag:
@@ -20,7 +20,7 @@ def sieve_of_eratosthenes(limit):
                 sieve[n * i] = False
                 i += 1
 
-    return [n for n, flag in sieve.items() if flag]
+    return [n for n, flag in enumerate(sieve) if flag]
 
 
 def fibonacci(n):
