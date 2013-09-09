@@ -106,9 +106,9 @@ def is_prime(n):
     # include one number larger than the square root, and one smaller.
     # Once you have gone through the smaller numbers it would be
     # redundant to check the larger halves as well.
-    end = math.sqrt(n)
+    limit = int(math.sqrt(n))
 
-    for i in xrange(2, int(end) + 1):
+    for i in xrange(2, limit + 1):
         if n % i == 0:
             return False
 
