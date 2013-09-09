@@ -15,7 +15,7 @@ def sieve_of_eratosthenes(limit):
 
         # If still marked as a prime
         if flag:
-            i = 2
+            i = n
             while n * i < limit + 1:
                 sieve[n * i] = False
                 i += 1
