@@ -1,4 +1,5 @@
 import math
+import operator
 
 from collections import Counter
 
@@ -47,14 +48,15 @@ def is_leap_year(year):
 # I.e. number of possible sets we can choose k items from n choices
 # When the order is not important and repetition is not allowed
 def nCk(n, k):
-    return factorial(n) / (factorial(n - k) * factorial(k))
+    return nPk(n, k) / factorial(k)
 
 
 # n Permute k.
 # I.e. number of ways we can choose k items from n choices
 # When the order is important and repetition is not allowed
+# Equal to n!/(n-1)!
 def nPk(n, k):
-    return factorial(n) / factorial(n - k)
+    return reduce(operator.mul, [n - i for i in xrange(k)])
 
 
 def factorial(n):
