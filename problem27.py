@@ -46,7 +46,7 @@ if __name__ == '__main__':
             n = 0
             while True:
                 value = (n**2) + a*n + b
-                if not check_is_prime(value):
+                if value < 2 or not check_is_prime(value):
                     break
 
                 n += 1
