@@ -1,6 +1,13 @@
 from utils import *
 
 
+def test_sieve_of_eratosthenes():
+    # Try for a small amount
+    assert sieve_of_eratosthenes(5) == [2, 3, 5]
+    # Try for a large amount
+    assert sieve_of_eratosthenes(70) == [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67]
+
+
 def test_fibonacci():
     assert fibonacci(1) == 1
     assert fibonacci(2) == 1

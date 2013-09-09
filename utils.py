@@ -4,6 +4,25 @@ import operator
 from collections import Counter
 
 
+# Generate primes up the given limit
+def sieve_of_eratosthenes(limit):
+
+    sieve = {}
+    for i in xrange(2, limit + 1):
+        sieve[i] = True
+
+    for n, flag in sieve.items():
+
+        # If still marked as a prime
+        if flag:
+            i = 2
+            while n * i < limit + 1:
+                sieve[n * i] = False
+                i += 1
+
+    return [n for n, flag in sieve.items() if flag]
+
+
 def fibonacci(n):
     if n == 1 or n == 2:
         return 1
