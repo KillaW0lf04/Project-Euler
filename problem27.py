@@ -52,6 +52,7 @@ if __name__ == '__main__':
 
     runtime = time.time() - t0
 
+    print 'Max Sequence = {}'.format(max_n)
     print 'a, b = {}'.format(result)
     print 'Result = {}'.format(result[0] * result[1])
     print 'Runtime = {}'.format(runtime)
