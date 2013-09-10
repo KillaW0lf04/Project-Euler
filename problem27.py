@@ -21,18 +21,13 @@
 
 import time
 
-from utils import is_prime
-
-
-def check_is_prime(n, _cache={}):
-    if n not in _cache:
-        _cache[n] = is_prime(n)
-
-    return _cache[n]
+from utils import sieve_of_eratosthenes
 
 
 if __name__ == '__main__':
     t0 = time.time()
+
+    primes = set(sieve_of_eratosthenes(100000))
 
     max_n = 0
     result = (0, 0)
@@ -46,7 +41,7 @@ if __name__ == '__main__':
             n = 0
             while True:
                 value = (n**2) + a*n + b
-                if value < 2 or not check_is_prime(value):
+                if value < 2 or value not in primes:
                     break
 
                 n += 1
