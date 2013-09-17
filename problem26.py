@@ -20,7 +20,7 @@ import time
 
 # Taken from:
 # http://www.mathblog.dk/project-euler-26-find-the-value-of-d-1000-for-which-1d-contains-the-longest-recurring-cycle/
-# Why (and how) does this work???
+# How does this work? This is the same process as a long division
 def cycle_length(number):
     remainders = set()
     i = 0
