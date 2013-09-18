@@ -12,6 +12,13 @@
 
 import time
 
+# It is also possible to calculate this problem by observing that the
+# negative diagonal is the square of numbers.
+# 25 = 5^2  9 = 3^2   1 = 1 ^ 2
+# 5 = 2^2 + 1  17 = 4^2 + 1
+
+# The other diagonal can then be easily calculate by subtracting appropriately
+
 
 def sum_of_diagonals(spiral):
     result = 0
