@@ -78,11 +78,11 @@ def nPk(n, k):
     return reduce(operator.mul, [n - i for i in xrange(k)])
 
 
-def factorial(n):
-    if n == 1 or n == 0:
-        return 1
-    else:
-        return n * factorial(n - 1)
+def factorial(n, _cache={0: 1, 1: 1}):
+    if n not in _cache:
+       _cache[n] = n * factorial(n - 1)
+
+    return _cache[n]
 
 
 # Calculates the number of divisors using the divisor theorem
