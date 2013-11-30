@@ -23,11 +23,11 @@ def sieve_of_eratosthenes(limit):
     return [n for n, flag in enumerate(sieve) if flag]
 
 
-def fibonacci(n):
-    if n == 1 or n == 2:
-        return 1
-    else:
-        return fibonacci(n - 1) + fibonacci(n - 2)
+def fibonacci(n, _cache={0: 1, 1: 1, 2: 1}):
+    if n not in _cache:
+        _cache[n] = fibonacci(n - 1) + fibonacci(n - 2)
+
+    return _cache[n]
 
 
 def is_deficient_number(n):
