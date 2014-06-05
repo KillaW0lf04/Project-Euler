@@ -4,6 +4,23 @@ import operator
 from collections import Counter
 
 
+def is_pandigital(x, y, z):
+    # Note this isnt a true pandigital function check
+    # It performs a 1-9 pandigital check for an equation
+    p = "%d%d%d" % (x, y, z)
+    c = Counter(p)
+
+    is_pd = True
+
+    for i in xrange(1, 10):
+        is_pd &= c[str(i)] == 1
+
+    # Make sure to exclude 0!
+    is_pd &= c["0"] == 0
+
+    return is_pd
+
+
 # Generate primes up the given limit
 def sieve_of_eratosthenes(limit):
 

@@ -15,28 +15,8 @@ HINT: Some products can be obtained in more than one way so be sure to only incl
 # Because of the hint, you should store results in a set to prevent collisions
 # perform sum(result) to find answer
 
-from collections import Counter
-
-
-def is_pandigital(x, y, z):
-    p = "%d%d%d" % (x, y, z)
-    c = Counter(p)
-
-    is_pd = True
-
-    for i in xrange(1, 10):
-        is_pd &= c[str(i)] == 1
-
-    # Make sure to exclude 0!
-    is_pd &= c["0"] == 0
-
-    return is_pd
-
 
 if __name__ == '__main__':
-
-    assert is_pandigital(39, 186, 7254)
-    assert not is_pandigital(12, 43, 4)
 
     import time
 

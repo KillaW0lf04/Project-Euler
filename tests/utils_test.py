@@ -1,6 +1,12 @@
 from utils import *
 
 
+def test_is_pandigital():
+    assert is_pandigital(39, 186, 7254)
+    assert not is_pandigital(12, 43, 4)
+    assert not is_pandigital(120, 34, 56789)
+
+
 def test_sieve_of_eratosthenes():
     # Try for a small amount
     assert sieve_of_eratosthenes(5) == [2, 3, 5]
