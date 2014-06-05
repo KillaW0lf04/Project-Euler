@@ -7,16 +7,24 @@ from collections import Counter
 def is_pandigital(x, y, z):
     # Note this isnt a true pandigital function check
     # It performs a 1-9 pandigital check for an equation
-    p = "%d%d%d" % (x, y, z)
-    c = Counter(p)
+    c = [0] * 10
+
+    def parse_no(no):
+        while no != 0:
+            c[no % 10] += 1
+            no /= 10
+
+    parse_no(x)
+    parse_no(y)
+    parse_no(z)
 
     is_pd = True
 
     for i in xrange(1, 10):
-        is_pd &= c[str(i)] == 1
+        is_pd &= c[i] == 1
 
     # Make sure to exclude 0!
-    is_pd &= c["0"] == 0
+    is_pd &= c[0] == 0
 
     return is_pd
 

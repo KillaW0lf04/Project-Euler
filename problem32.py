@@ -15,6 +15,7 @@ HINT: Some products can be obtained in more than one way so be sure to only incl
 # Because of the hint, you should store results in a set to prevent collisions
 # perform sum(result) to find answer
 
+from utils import is_pandigital
 
 if __name__ == '__main__':
 
@@ -74,7 +75,9 @@ if __name__ == '__main__':
             if is_pandigital(x, y, z):
                 results.add(z)
 
+    runtime = time.time() - t0
+
     print results
 
     print 'Results = {}'.format(sum(results))
-    print 'Runtime = {}'.format(time.time() - t0)
+    print 'Runtime = {}'.format(runtime)
