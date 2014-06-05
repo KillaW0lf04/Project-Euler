@@ -1,0 +1,11 @@
+# Python
+*.pyc
+
+# Linux
+*~
+
+# Pycharm
+.idea
+
+# Mercirual
+.hg
