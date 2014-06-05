@@ -4,6 +4,10 @@
 # Linux Junk
 .*~
 
+# Git
+.git
+.gitignore
+
 # Python Junk
 .*\.pyc
 
